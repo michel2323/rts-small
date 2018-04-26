@@ -15,7 +15,8 @@ prof=params.profiling
 ViolCost = params.ViolCost
 
 # Set here the number scenarios
-numScen=parse(Int, ARGS[1])*32
+#numScen=parse(Int, ARGS[1])*32
+numScen=parse(Int, ARGS[1])
 
 gpm = StructuredModel(num_scenarios=numScen)
 
@@ -41,10 +42,11 @@ end
 
 tic()
 
+println("rank: ", getRank(), "rts: ", rts)
 for i in 0:numScen-1
     filename="sj_scenario_$(i).jl"
     if(i+1 in ids)
-        println("filename: ", filename)
+        println("filename: ", filename, " rank: ", getRank())
         #global bl = StructuredModel(parent=gpm, id=i+1)
         include(filename)
     else
