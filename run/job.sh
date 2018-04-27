@@ -1,5 +1,5 @@
 #!/bin/bash
-#COBALT -t 180 
+#COBALT -t 120 
 #COBALT -n 392
 #COBALT --attrs mcdram=cache:numa=quad
 #COBALT -A CSC249ADSE22
@@ -11,7 +11,7 @@ export n_openmp_threads_per_rank=2
 export n_hyperthreads_per_core=1
 export n_hyperthreads_skipped_between_ranks=4
 export julia_exec=/home/mschanen/src/julia-ae26b25d43/bin/julia
-export julia_model=/projects/CSC249ADSE22/rts/rts-n-2/template2.jl
+export julia_model=/projects/CSC249ADSE22/rts/rts-n-2/template.jl
 #export julia_model=/home/mschanen/git/ecp-formulation/SGD_GRIDPACK/ECP_PROBLEM3/rts/quad/template2.jl
 export julia_sysimg=/home/mschanen/src/julia-ae26b25d43/lib/julia/sys.so
 export LD_LIBRARY_PATH=/home/mschanen/src/julia-ae26b25d43/lib/julia:$LD_LIBRARY_PATH

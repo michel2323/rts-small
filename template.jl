@@ -15,7 +15,7 @@ prof=params.profiling
 ViolCost = params.ViolCost
 
 # Set here the number scenarios
-numScen=parse(Int, ARGS[1])*32
+numScen=parse(Int, ARGS[1])
 
 gpm = StructuredModel(num_scenarios=numScen)
 
