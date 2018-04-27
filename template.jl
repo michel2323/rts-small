@@ -44,7 +44,6 @@ tic()
 for i in 0:numScen-1
     filename="sj_scenario_$(i).jl"
     if(i+1 in ids)
-        println("filename: ", filename)
         #global bl = StructuredModel(parent=gpm, id=i+1)
         include(filename)
     else
