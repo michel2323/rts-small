@@ -1,3 +1,5 @@
+import MPI
+MPI.Init()
 using StructJuMP, JuMP
 using StructJuMPSolverInterface
 include("parallel.jl")
@@ -7,6 +9,7 @@ using parallel
 using output
 
 # Change to PipsNlp to run with PIPS
+
 
 solver=params.solver
 maxpipsiter=10
